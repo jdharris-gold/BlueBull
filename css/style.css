@@ -53,3 +53,31 @@ body {
     color: white;
     margin-top: 40px;
 }
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0a3d62;
+    padding: 12px 20px;
+    color: white;
+}
+
+.nav-logo {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 18px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+}
