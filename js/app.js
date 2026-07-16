@@ -16,7 +16,9 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+// const db = firebase.firestore();
 const db = firebase.firestore();
+db.settings({ host: "firestore.googleapis.com", ssl: true });
 const auth = firebase.auth();
 
 // -------------------------------
