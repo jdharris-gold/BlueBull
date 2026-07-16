@@ -35,13 +35,17 @@ async function bluebullSave(section, data) {
         return;
     }
 
-    await db.collection("users")
-        .doc(window.currentUser)
-        .collection(section)
-        .doc("data")
-        .set(data);
+    try {
+        await db.collection("users")
+            .doc(window.currentUser)
+            .collection(section)
+            .doc("data")
+            .set(data);
 
-    console.log(`Saved ${section}:`, data);
+        console.log(`Saved ${section}:`, data);
+    } catch (error) {
+        console.error("Firestore error:", error);
+    }
 }
 
 // -------------------------------
