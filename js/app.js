@@ -30,6 +30,7 @@ const auth = firebase.auth();
 // Generic Save Function
 // -------------------------------
 async function bluebullSave(section, data) {
+    console.log('Hi');
     if (!window.currentUser) {
         alert("Please log in first.");
         return;
