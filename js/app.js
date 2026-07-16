@@ -22,15 +22,15 @@ const auth = firebase.auth();
 // -------------------------------
 // Authentication State Listener
 // -------------------------------
-auth.onAuthStateChanged(user => {
-    if (user) {
-        window.currentUser = user.uid;
-        console.log("Logged in:", user.uid);
-    } else {
-        window.currentUser = null;
-        console.log("Not logged in");
-    }
-});
+//auth.onAuthStateChanged(user => {
+//    if (user) {
+//        window.currentUser = user.uid;
+//        console.log("Logged in:", user.uid);
+//    } else {
+//        window.currentUser = null;
+//        console.log("Not logged in");
+//    }
+//});
 
 // -------------------------------
 // Generic Save Function
