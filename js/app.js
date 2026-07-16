@@ -1,3 +1,5 @@
+window.currentUser = "test-user";
+
 // -------------------------------
 // BlueBull Firebase Initialization
 // -------------------------------
