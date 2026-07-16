@@ -9,7 +9,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBLeW5lL_fK6krCG9N_Sd28kjFGTWj2WIw",
   authDomain: "bluebull-39dfd.firebaseapp.com",
   projectId: "bluebull-39dfd",
-  storageBucket: "bluebull-39dfd.firebasestorage.app",
+  storageBucket: "bluebull-39dfd.appspot.com",
   messagingSenderId: "246819477418",
   appId: "1:246819477418:web:194af466ced6d778467dd3",
   measurementId: "G-V858F9FSSQ"
