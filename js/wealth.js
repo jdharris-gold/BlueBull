@@ -17,7 +17,7 @@ document.getElementById("saveWealth").addEventListener("click", async () => {
     const assets = Number(document.getElementById("assets").value);
     const debts = Number(document.getElementById("debts").value);
     const netWealth = assets - debts;
-    alert("Fired 1!"); //This alert fired successfully
+    alert("Fired 1!"); // This executed successfully
     document.getElementById("netWealth").innerText = netWealth; // This executed successfully
     console.log("Reached BEFORE second alert");
     alert("Fired 2!"); // This executed successfully
@@ -26,10 +26,11 @@ document.getElementById("saveWealth").addEventListener("click", async () => {
      alert("Fired 3!"); // This executed successfully
     
     try {
-        await bluebullSave("wealth", { assets, debts, netWealth });
         alert("Fired 4!"); // This executed successfully
+        await bluebullSave("wealth", { assets, debts, netWealth });
+        alert("Fired 5!"); // This did not fire
     } catch (err) {
-        alert("ERROR: " + err.message);
+        alert("ERROR: " + err.message); // This did not fire
         console.error(err);
     }
     
