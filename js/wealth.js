@@ -17,9 +17,9 @@ document.getElementById("saveWealth").addEventListener("click", async () => {
     const assets = Number(document.getElementById("assets").value);
     const debts = Number(document.getElementById("debts").value);
     const netWealth = assets - debts;
-    alert("bluebullSave() fired!");
-    document.getElementById("netWealth").innerText = netWealth;
-    alert("bluebullSave() fired!");
+    alert("bluebullSave() fired!"); //This alert fired successfully
+    document.getElementById("netWealth").innerText = netWealth; // This executed successfully
+    alert("bluebullSave() fired!"); //This alert did not fire
     
     await bluebullSave("wealth", {
         assets,
