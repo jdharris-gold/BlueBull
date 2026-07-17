@@ -19,11 +19,21 @@ document.getElementById("saveWealth").addEventListener("click", async () => {
     const netWealth = assets - debts;
     alert("bluebullSave() fired!"); //This alert fired successfully
     document.getElementById("netWealth").innerText = netWealth; // This executed successfully
-    alert("bluebullSave() fired!"); //This alert did not fire
+    console.log("Reached BEFORE second alert");
+    alert("Reached BEFORE second alert");
+
+    console.log("Calling bluebullSave now...");
     
-    await bluebullSave("wealth", {
-        assets,
-        debts,
-        netWealth
-    });
+    try {
+        await bluebullSave("wealth", { assets, debts, netWealth });
+    } catch (err) {
+        alert("ERROR: " + err.message);
+        console.error(err);
+    }
+    
+   // await bluebullSave("wealth", {
+   //     assets,
+   //     debts,
+    //    netWealth
+   // });
 });
