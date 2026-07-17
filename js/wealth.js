@@ -20,14 +20,14 @@ document.getElementById("saveWealth").addEventListener("click", async () => {
     alert("Fired 1!"); //This alert fired successfully
     document.getElementById("netWealth").innerText = netWealth; // This executed successfully
     console.log("Reached BEFORE second alert");
-    alert("Fired 2"); // This executed successfully
+    alert("Fired 2!"); // This executed successfully
 
     console.log("Calling bluebullSave now...");
-     alert("Fired 3"); // This executed successfully
+     alert("Fired 3!"); // This executed successfully
     
     try {
         await bluebullSave("wealth", { assets, debts, netWealth });
-        alert("Fired 4"); // This executed successfully
+        alert("Fired 4!"); // This executed successfully
     } catch (err) {
         alert("ERROR: " + err.message);
         console.error(err);
